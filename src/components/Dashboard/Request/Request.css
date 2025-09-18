@@ -1,0 +1,281 @@
+.requests {
+    /* height: 100vh; */
+    width: 100%;
+    padding: 50px 100px;
+    /* background-color: red; */
+}
+
+
+
+.task-card {
+    border: 1px solid #CCC;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 15px 0;
+    /* font-family: Arial, sans-serif; */
+    color: #333;
+}
+
+.task-row {
+    display: grid;
+    grid-template-columns: repeat(12, auto) 30px;
+    align-items: center;
+    gap: 15px;
+}
+
+.task-row div {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.task-row strong {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    color: #777;
+}
+
+.status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.status.unassigned {
+    background: #e74c3c;
+}
+
+.status.in-translation {
+    background: #27ae60;
+}
+
+.status.proofreading {
+    background: #9b59b6;
+}
+
+.status.certification {
+    background: #f1c40f;
+    color: #333;
+}
+
+.arrow-left {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: red;
+    text-align: right;
+    color: #333;
+    background-color: red !important;
+}
+
+
+.input-field{
+    margin: 10px 0;
+}
+
+
+.filters-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.filters-container {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f3f0;
+    border-radius: 10px;
+    padding: 5px 30px;
+    /* background-color: red !important; */
+    margin-bottom: 10px;
+    /* background-color: red; */
+    min-width: 200px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.filter-box:hover {
+    background: #ebe7e2;
+}
+
+.filter-label {
+    font-size: 14px;
+    color: #4a3f3f;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* background-color: red; */
+    background-color: #f5f3f0;
+    max-width: 120px;
+}
+
+.filter-icon {
+    color: #4a3f3f;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.filter-icon.rotated {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* background-color: red; */
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 4px;
+}
+
+.dropdown-option {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #4a3f3f;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-option:last-child {
+    border-bottom: none;
+}
+
+.dropdown-option:hover {
+    background-color: #f5f3f0;
+}
+
+.dropdown-option:first-child {
+    color: #888;
+    /* font-style: italic; */
+}
+
+.dropdown-option:first-child:hover {
+    /* background-color: #ffe6e6; */
+}
+
+/* Custom scrollbar for dropdown */
+.dropdown-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+.upload-file-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+.upload-file{
+
+    /* background-color: red; */
+}
+
+.upload-file-container-viewport {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red !important; 
+}
+
+/* Solution 2: Center in a specific container */
+.parent-container {
+    height: 20px;
+    width: 100%;
+    background-color: #ddd;
+/* background-color: red !important; */
+    border: 2px solid #999;
+    margin: 20px 0;
+}
+
+.upload-file-container-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    height: 100%; /* Take full height of parent */
+    width: 100%;  /* Take full width of parent */
+}
+
+/* Solution 3: Fixed size container centered */
+.upload-file-container-fixed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    height:50px;
+    width: 300px;
+    margin: 20px auto; /* Center the container itself */
+}
+
+/* Common styles for file upload */
+.file-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px dashed white;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #000;
+    /* color: white; */
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+.file-upload:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.upload-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.demo-section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.demo-section h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.demo-section p {
+    margin-bottom: 15px;
+    color: #666;
+}
